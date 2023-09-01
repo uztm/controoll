@@ -8,6 +8,10 @@
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./media.css">
+    <link rel="icon" href="./assets/logo2.png" type="image/png" sizes="32x32">
+    <!-- <link rel="icon" href="./assets/logo2.svg" type="image/svg+xml" sizes="any"> -->
+    <link rel="icon" href="./assets/logo2.ico" type="image/x-icon">
+    <title>Controll.uz Online LMS boshqaruv tizimi📖</title>
 </head>
 
 <body>
@@ -54,7 +58,7 @@
                     ta’lim muhiti o‘quvchining to‘liq salohiyatini ochishning kalitidir.
                 </p>
                 <div class="btn-wrp" style="margin-top: 40px;">
-                    <button class="btn btn-custom">Yuklab olish <img src="./assets/download-01.png" alt=""></button>
+                    <a href="./download.html"><button class="btn btn-custom">Yuklab olish <img src="./assets/download-01.png" alt=""></button></a>
                     <a href="#contact"><button class="btn-custom"
                             style="background-color: white;color: #5730FB;">Aloqa</button></a>
                 </div>
@@ -107,11 +111,12 @@
                 <header class="header-md">
                     <h3 style="color: #5730FB;">Aloqa ☎️</h3>
                 </header>
-                <p style="width: 303px; text-align: center; color: #777A7D;">Malumotlaringizni qoldiring va biz siz
-                    bilan tez orada bog’lanamiz.</p>
-                <input type="text" class="name inp" placeholder="Ismingizni kiriting"> <br>
-                <input type="phone" name="" class="phone inp" id="" placeholder="Telefon raqamingizni kiriting"> <br>
-                <button class="send-btn inp">Yuborish</button>
+                <p style="width: 303px; text-align: center; color: #777A7D;">Malumotlaringizni qoldiring va biz siz bilan tez orada bog’lanamiz.</p>
+                    <form style="width: 80%; display: flex;align-items: center;justify-content: center;flex-direction: column; margin-top: 30px;" id="telegramForm">
+                        <input type="text" class="name inp" id="name" placeholder="Ismingizni kiriting" required><br>
+                        <input type="tel" class="phone inp" id="phone" placeholder="Telefon raqamingizni kiriting" required><br>
+                        <button type="submit" class="send-btn inp">Yuborish</button>
+                    </form>
             </div>
             <div class="left-contact">
                 <header class="header-md">
