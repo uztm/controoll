@@ -7,7 +7,8 @@ document.getElementById('burgerButton').addEventListener('click', function () {
 });
 
 
-const botToken = 'YOUR_BOT_TOKEN';
+const botToken = '6677425770:AAHoMXWmxYbIlZ7arQoYgpWrwz40lH-7z1U'; // Replace with your bot token
+const chatId = '-901384057'; // Replace with the chat ID you want to send the message to
 
 document.getElementById('telegramForm').addEventListener('submit', function (e) {
     e.preventDefault();
@@ -16,9 +17,20 @@ document.getElementById('telegramForm').addEventListener('submit', function (e) 
     const phone = document.getElementById('phone').value;
     const message = `Name: ${name}\nPhone: ${phone}`;
 
-    const url = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=YOUR_CHAT_ID&text=${encodeURIComponent(message)}`;
+    const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
-    fetch(url, { method: 'POST' })
+    const data = {
+        chat_id: chatId,
+        text: message
+    };
+
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
         .then(response => response.json())
         .then(data => {
             if (data.ok) {
